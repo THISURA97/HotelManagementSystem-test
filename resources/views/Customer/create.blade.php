@@ -6,7 +6,7 @@
         <div class="col-lg-12 mt40">
             <div class="pull-left">
                 <br><br>
-                <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbsp Add Client</h2>
+                <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbsp Add Customer</h2>
                 <br>
             </div>
         </div>
