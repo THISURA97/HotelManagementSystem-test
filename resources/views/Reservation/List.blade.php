@@ -5,7 +5,7 @@
     <div class="row mt40">
         <div class="col-md-10">
             <br><br>
-            <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbspCustomer</h2><br><br>
+            <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbspReservation</h2><br><br>
         </div>
 
 
@@ -29,34 +29,34 @@
             <thead>
             <tr>
                 <th>Id</th>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>NIC</th>
-                <th>Moibile</th>
-                <th>Email</th>
+                <th>RoomType</th>
+                <th>RoomNo</th>
+                <th>Basis</th>
+                <th>CheckIn</th>
+                <th>CheckOut</th>
                 <th>Created at</th>
                 <td colspan="2">Action</td>
+
             </tr>
             </thead>
             <tbody>
-            @foreach($Customer as $Customer)
+            @foreach($Reservation as $Reservation)
                 <tr>
-                    <td>{{ $Customer->id }}</td>
-                    <td>{{ $Customer->FirstName }}</td>
-                    <td>{{ $Customer->LastName }}</td>
-                    <td>{{ $Customer->NIC }}</td>
-                    <td>{{ $Customer->Mobile }}</td>
-                    <td>{{ $Customer->Email }}</td>
-                    <td>{{ date('d m Y', strtotime($Customer->created_at)) }}</td>
-                    <td><a href="{{ route('Customer.edit',$Customer->id)}}" class="btn btn-primary">Edit</a></td>
+                    <td>{{ $Reservation->id }}</td>
+                    <td>{{ $Reservation->RoomType }}</td>
+                    <td>{{ $Reservation->RoomNo }}</td>
+                    <td>{{ $Reservation->Basis }}</td>
+                    <td>{{ $Reservation->CheckIn }}</td>
+                    <td>{{ $Reservation->CheckOut }}</td>
+                    <td>{{ date('d m Y', strtotime($Reservation->created_at)) }}</td>
+                    <td><a href="{{ route('Reservation.edit',$Reservation->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
-                        <form action="{{ route('Customer.destroy', $Customer->id)}}" method="post">
+                        <form action="{{ route('Reservation.destroy', $Reservation->id)}}" method="post">
                             {{ csrf_field() }}
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit">Delete</button>
                         </form>
                     </td>
-                    <td><a href="{{"route('Reservation',$Customer->id)"}}">Reserve</a> </td>
 
                 </tr>
             @endforeach

@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/reservation', 'ReservationController@index')->name('reservation');
+Route::resource('Reservation', 'ReservationController');
 
 Route::get('/service', 'ServiceController@index')->name('service');
 
