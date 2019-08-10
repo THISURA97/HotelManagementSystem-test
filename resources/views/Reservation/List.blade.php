@@ -25,7 +25,10 @@
             </div>
         @endif
 
+
         <table class="table table-bordered" id="laravel_crud">
+
+
             <thead>
             <tr>
                 <th>Id</th>
@@ -40,8 +43,10 @@
             </tr>
             </thead>
             <tbody>
+
             @foreach($Reservation as $Reservation)
                 <tr>
+
                     <td>{{ $Reservation->id }}</td>
                     <td>{{ $Reservation->RoomType }}</td>
                     <td>{{ $Reservation->RoomNo }}</td>

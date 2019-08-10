@@ -56,7 +56,7 @@
                             <button class="btn btn-danger" type="submit">Delete</button>
                         </form>
                     </td>
-                    <td><a href="{{"route('Reservation',$Customer->id)"}}">Reserve</a> </td>
+                    <td><a href="{{route('Reservation.create',$Customer->id)}}">Reserve</a> </td>
 
                 </tr>
             @endforeach
