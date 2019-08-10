@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/reservation', 'ReservationController@index')->name('reservation');
+
+Route::get('/service', 'ServiceController@index')->name('service');
+
+Route::resource('client','clientController');
+Route::resource('Customer','CustomerController');
+
+
