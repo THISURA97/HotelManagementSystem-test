@@ -28,37 +28,41 @@
 
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="firstName">First Name:</label>
+            <label class="col-sm-3 col-form-label" for="RoomType">Customer Name:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="First Name"  name="FirstName" value="{{ $Reservation_info->FirstName }}">
+                <input type="text" class="form-control" placeholder="Customer Name"  name="RoomType" value="{{ $Reservation_info->RoomType }}">
             </div>
         </div>
 
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="lastName">Last Name:</label>
+            <label class="col-sm-3 col-form-label" for="RoomNo">Room No:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control"  placeholder="Last Name" name="LastName" value="{{ $Reservation_info->LastName }}">
+                <input type="text" class="form-control"  placeholder="Room No" name="RoomNo" value="{{ $Reservation_info->RoomNo }}">
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="NIC">NIC:</label>
-            <div class="col-sm-9">
-                <input type="number" class="form-control"  placeholder="NIC" name="NIC" value="{{ $Reservation_info->NIC }}">
+            <label class="col-sm-3 col-form-label" for="Basis">Basis:</label>
+            <div class="col-sm-9"> <select id="select_id" class="custom-select" name="Basis">
+                    <option value="{{ $Reservation_info->Basis }}" selected="selected">Basis type</option>
+                    <option value="Half-board">Half-board</option>
+                    <option value="Full-board">Full-board</option>
+                </select>
+
             </div>
         </div>
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="Mobile">Mobile:</label>
+            <label class="col-sm-3 col-form-label" for="CheckIn">From:</label>
             <div class="col-sm-9">
-                <input type="number" class="form-control"  placeholder="Phone Number" name="Mobile" value="{{ $Reservation_info->Mobile }}">
+                <input type="date" class="form-control"  placeholder="From" name="CheckIn" value="{{ $Reservation_info->CheckIn }}">
             </div>
         </div>
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="inputEmail">Email:</label>
+            <label class="col-sm-3 col-form-label" for="CheckOut">To:</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control"  placeholder="Email Address" name="email" value="{{ $Reservation_info->Email }}">
+                <input type="date" class="form-control"  placeholder="To" name="CheckOut" value="{{ $Reservation_info->CheckOut }}">
             </div>
         </div>
 

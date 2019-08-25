@@ -24,27 +24,28 @@
         </div>
     @endif
 
+
     <form action="{{ route('Reservation.store') }}" method="POST" name="add_Reservation">
         {{ csrf_field() }}
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Room type:</label>
+            <label class="col-sm-3 col-form-label">Customer:</label>
             <div class="col-sm-9 mt-2">
-                <select id="select_id" class="custom-select" name="RoomType">
-                    <option value="" selected="selected">Room type</option>
-                    <option value="1">Standard</option>
-                    <option value="2">Luxury</option>
-                </select>
+                <input type="text" class="form-control" placeholder="CustomerName"  name="RoomType">
             </div>
         </div>
 
         <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Rooms No:</label>
+            <label class="col-sm-3 col-form-label">Room:</label>
             <div class="col-sm-9 mt-2">
                 <select id="select_id" class="custom-select" name="RoomNo">
                     <option value="" selected="selected">Room No</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="s1">S001</option>
+                    <option value="s2">S002</option>
+                    <option value="s3">S003</option>
+                    <option value="s4">S004</option>
+                    <option value="l1">L001</option>
+                    <option value="l2">L002</option>
                 </select>
             </div>
 
@@ -55,8 +56,8 @@
             <div class="col-sm-9 mt-2">
                 <select id="select_id" class="custom-select" name="Basis">
                     <option value="" selected="selected">Basis type</option>
-                    <option value="1">Half-board</option>
-                    <option value="2">Full-board</option>
+                    <option value="Half-board">Half-board</option>
+                    <option value="Full-board">Full-board</option>
                 </select>
             </div>
         </div>

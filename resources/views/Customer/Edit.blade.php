@@ -25,8 +25,6 @@
         @method('PATCH')
 
 
-
-
         <div class="form-group row">
             <label class="col-sm-3 col-form-label" for="firstName">First Name:</label>
             <div class="col-sm-9">
@@ -58,7 +56,7 @@
         <div class="form-group row">
             <label class="col-sm-3 col-form-label" for="inputEmail">Email:</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control"  placeholder="Email Address" name="email" value="{{ $Customer_info->Email }}">
+                <input type="email" class="form-control"  placeholder="Email Address" name="Email" value="{{ $Customer_info->Email }}">
             </div>
         </div>
 

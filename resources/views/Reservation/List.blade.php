@@ -25,29 +25,34 @@
             </div>
         @endif
 
+        <div class="container">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control">
+            <br>
 
+        </div>
         <table class="table table-bordered" id="laravel_crud">
 
 
             <thead>
             <tr>
-                <th>Id</th>
-                <th>RoomType</th>
+
+                <th>Customer Name</th>
                 <th>RoomNo</th>
                 <th>Basis</th>
                 <th>CheckIn</th>
                 <th>CheckOut</th>
-                <th>Created at</th>
+                <th>Updated at</th>
                 <td colspan="2">Action</td>
 
             </tr>
             </thead>
             <tbody>
 
+
             @foreach($Reservation as $Reservation)
                 <tr>
 
-                    <td>{{ $Reservation->id }}</td>
+
                     <td>{{ $Reservation->RoomType }}</td>
                     <td>{{ $Reservation->RoomNo }}</td>
                     <td>{{ $Reservation->Basis }}</td>
@@ -72,3 +77,23 @@
     @endsection
     </div>
     </div>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("laravel_crud");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
