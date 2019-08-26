@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Input;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Auth::routes();
 
@@ -161,7 +157,7 @@ Route::get('/list',[
 ]);
 
 
-Route::get('/financeRequest',[
+Route::get('/',[
 
     'uses' => 'FinanceRequest@getRequest',
     'as' => 'financeRequest'
