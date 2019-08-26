@@ -262,3 +262,119 @@ Route::get('/update/mybookings/{id}', 'customer2Controller@updateData');
 
 
 
+
+
+
+
+Route::get('task','TaskController@index')->name('task');
+Route::get('task/getdata','TaskController@getdata')->name('task.getdata');
+Route::post('task/postdata', 'TaskController@postdata')->name('task.postdata');
+Route::get('task/fetchdata', 'TaskController@fetchdata')->name('task.fetchdata');
+Route::get('task/removedata', 'TaskController@removedata')->name('task.removedata');
+Route::get('task/complete', 'TaskController@complete')->name('task.complete');
+
+Route::get('session','SessionController@index')->name('session');
+Route::get('session/getdata','SessionController@getdata')->name('session.getdata');
+Route::post('session/postdata', 'SessionController@postdata')->name('session.postdata');
+Route::get('session/fetchdata', 'SessionController@fetchdata')->name('session.fetchdata');
+Route::get('session/removedata', 'SessionController@removedata')->name('session.removedata');
+Route::get('session/complete', 'SessionController@complete')->name('session.complete');
+
+Route::get('room', function() {
+    return view('room');
+});
+
+Route::get('report', function() {
+    return view('report');
+});
+
+Route::get('Hdashboard', function() {
+    return view('Hdashboard');
+});
+
+
+Route::get('/addevents', function () {
+    return view('addevents');
+});
+
+Route::post('/submitEvent', 'EventController@save');
+
+Route::get('/Events', 'EventController@view');
+
+Route::get('/update/{id}', 'EventController@update');
+
+Route::post('/edit/{id}', 'EventController@edit');
+
+Route::get('/read/{id}', 'EventController@read');
+
+Route::get('/deleteevent/{id}', 'EventController@delete');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dash', function () {
+    return view('dashboard.dashboard');
+});
+
+Route::get('/pagination', 'PaginationController@index');
+
+Route::resource('categories', 'CategoryController'); //folder name and the controller
+
+Route::resource('customsearch', 'CustomSearchController');
+
+Route::get('/pdf', 'PdfController@index');
+
+Route::get('/dynamic_pdf/pdf', 'PdfController@pdf');
+
+Route::resource('requestimtems', 'RequestController');
+
+
+Route::get('EProfile', function () {
+    return view('EProfile');
+});
+
+Route::get('Attendance', function () {
+    return view('Attendance');
+});
+
+Route::get('EDashboard', function () {
+    return view('EDashboard');
+});
+Route::get('EmpViewPro', function () {
+    return view('EmpViewPro');
+});
+
+Route::get('CreateAcc', function () {
+    return view('CreateAcc');
+});
+
+Route::get('EmpDetails', function () {
+    return view('EmpDetails');
+});
+
+Route::get('UpdateEmpDetails', function () {
+    return view('UpdateEmpDetails');
+});
+
+//dashboard buttons
+Route::get('/addEmp','EmployeeController@createacc') -> name('addEmp');
+Route::get('/addEmp','EmployeeController@empview') -> name('addEmp');
+Route::get('/attenEmp','EmployeeController@attenEmp') -> name('attenEmp');
+
+
+
+//controller
+Route::get('/emoloyee','EmployeeController@index');
+
+Route::post('/employee','EmployeeController@store')->name('addimage');
+
+//emplist
+Route::get('/accView','EmployeeController@createAccViewEmp');
+
+//Attendance
+Route::get('/attenEmpView','EmployeeController@attenEmpView');
+
+Route::post('/delete-emp','EmployeeController@deleteEmp');
+
+
