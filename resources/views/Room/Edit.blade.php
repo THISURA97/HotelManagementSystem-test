@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12 mt40">
                 <div class="pull-left"><br><br>
-                    <h2><a href="/Room"><i class="fa fa-arrow-left"></i></a>&nbsp&nbspUpdate Room</h2><br><br>
+                    <h2><a href="/Room"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp<b>Update</b> Room</h2><br><br>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('Room.update', $Room_info->id) }}" method="POST" name="update_Room">
+        <form action="{{ route('Room.update', $Room_info->id) }}" method="POST" name="update_Room" style="font-size: 18px">
             {{ csrf_field() }}
             @method('PATCH')
 

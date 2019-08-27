@@ -5,7 +5,7 @@
         <div class="row mt40">
             <div class="col-md-10">
                 <br><br>
-                <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbspRooms</h2><br><br>
+                <h2><a href="/home"><i class="fa fa-arrow-left" style="color:orange"></i></a>&nbsp&nbspRoom&nbsp<b>List</b></h2><br><br>
             </div>
 
 
@@ -27,13 +27,13 @@
                 </div>
             @endif
             <div class="container">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control" style="font-size: 18px">
                 <br>
 
             </div>
-            <table class="table table-bordered" id="laravel_crud">
+            <table class="table table-bordered" id="laravel_crud" style="font-size: 18px">
                 <thead>
-                <tr>
+                <tr style="background-color: orange">
 
 
                     <th>RoomType</th>
@@ -61,7 +61,7 @@
 
                             </form>
                         </td>
-                        <td> <a href="{{route('Reservation.create',$Room->RoomNo)}}"class="btn btn-info">Reserve</a></td>
+                        <td> <a href="{{route('Reservation.create',$Room->RoomNo)}}"class="btn btn-dark">Reserve</a></td>
 
                     </tr>
                 @endforeach

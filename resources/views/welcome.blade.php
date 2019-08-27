@@ -14,7 +14,38 @@
 </head>
 <body>
 
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class ="img-fluid">
+                <img width="100%" src="https://lasvegasrealestate.com/wp-content/uploads/2018/11/holiday-vacation-hotel-luxury.jpg" alt="First slide" height="750">
+            </div>
+        </div>
+    </div>
 
+    <div class="carousel-item">
+        <img class="d-block w-100" src= "https://lasvegasrealestate.com/wp-content/uploads/2018/11/holiday-vacation-hotel-luxury.jpg" alt="Second slide"  height="750">
+    </div>
+    <div class="carousel-item">
+        <img class="d-block w-100" src= "https://www.refreshhikkaduwa.com/components/com_vikbooking/resources/uploads/big_deluxe-room-slider-6.jpg" alt="Third slide"   height="750">
+    </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
+</div>
+
+</body>
 <footer class="nb-footer">
     <div class="container">
         <div class="row">
@@ -77,7 +108,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <p>Copyright © 2017. Your Company.</p>
+                    <p>Copyright © 2019. Your Company.</p>
                 </div>
                 <div class="col-sm-6"></div>
             </div>

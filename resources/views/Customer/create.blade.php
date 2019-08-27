@@ -6,7 +6,7 @@
         <div class="col-lg-12 mt40">
             <div class="pull-left">
                 <br><br>
-                <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbsp Add Customer</h2>
+                <h2 class="panel-heading"><div class="panel-title" ><a href="/home"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp&nbsp<b>Add</b>&nbspCustomer</div></h2>
                 <br>
             </div>
         </div>
@@ -22,8 +22,8 @@
             </ul>
         </div>
     @endif
-
-    <form action="{{ route('Customer.store') }}" method="POST" name="add_Customer">
+<br><br>
+    <form action="{{ route('Customer.store') }}" method="POST" name="add_Customer" style="font-size:18px;font-family: 'Roboto', sans-serif;">
         {{ csrf_field() }}
 
         <div class="form-group row">
@@ -69,11 +69,10 @@
         <br>
         <div class="form-group row">
             <div class="col-sm-9 offset-sm-3">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-secondary" value="Reset">
+                <input type="submit" class="btn btn-primary" value="Submit" style="font-size: 18px">
+                <input type="reset" class="btn btn-secondary" value="Reset" style="font-size: 18px">
             </div>
         </div>
-
 
 
 

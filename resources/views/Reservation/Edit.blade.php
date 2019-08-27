@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 mt40">
             <div class="pull-left"><br><br>
-                <h2><a href="/Reservation"><i class="fa fa-arrow-left"></i></a>&nbsp&nbspUpdate Reservation</h2><br><br>
+                <h2><a href="/Reservation"><i class="fa fa-arrow-left" style="color:orange"></i></a>&nbsp&nbspUpdate Reservation</h2><br><br>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('Reservation.update', $Reservation_info->id) }}" method="POST" name="update_Reservation">
+    <form action="{{ route('Reservation.update', $Reservation_info->id) }}" method="POST" name="update_Reservation" style="font-size: 18px">
         {{ csrf_field() }}
         @method('PATCH')
 
@@ -29,8 +29,8 @@
 
         <div class="form-group row">
             <label class="col-sm-3 col-form-label" for="RoomType">Customer Name:</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Customer Name"  name="RoomType" value="{{ $Reservation_info->RoomType }}">
+            <div class="col-sm-9" >
+                <input type="text" class="form-control" placeholder="Customer Name"  name="RoomType" value="{{ $Reservation_info->RoomType }}" >
             </div>
         </div>
 
@@ -65,7 +65,7 @@
                 <input type="date" class="form-control"  placeholder="To" name="CheckOut" value="{{ $Reservation_info->CheckOut }}">
             </div>
         </div>
-
+<br>
 
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -6,7 +6,7 @@
             <div class="col-lg-12 mt40">
                 <div class="pull-left">
                     <br><br>
-                    <h2><a href="/home"><i class="fa fa-arrow-left"></i></a>&nbsp&nbsp Add Room</h2>
+                    <h2><a href="/home"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp <b>Add</b>  Room</h2>
                     <br>
                 </div>
             </div>
@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        <form action="{{ route('Room.store') }}" method="POST" name="add_Room">
+        <form action="{{ route('Room.store') }}" method="POST" name="add_Room" style="font-size: 18px">
             {{ csrf_field() }}
 
             <div class="form-group row">
