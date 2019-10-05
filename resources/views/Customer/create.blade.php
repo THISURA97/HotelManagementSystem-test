@@ -1,12 +1,12 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
+@section('content')
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mt40">
             <div class="pull-left">
                 <br><br>
-                <h2 class="panel-heading"><div class="panel-title" ><a href="/home"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp&nbsp<b>Add</b>&nbspCustomer</div></h2>
+                <h2 class="panel-heading"><div class="panel-title" ><a href="/Frontdesk"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp&nbsp<b>Add</b>&nbspCustomer</div></h2>
                 <br>
             </div>
         </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 <br><br>
-    <form action="{{ route('Customer.store') }}" method="POST" name="add_Customer" style="font-size:18px;font-family: 'Roboto', sans-serif;">
+    <form action="{{ route('Customer.store') }}" method="POST" name="add_Customer" style="font-size:18px;font-family: 'Roboto', sans-serif;backdrop-filter: blur(5px)">
         {{ csrf_field() }}
 
         <div class="form-group row">
@@ -69,7 +69,7 @@
         <br>
         <div class="form-group row">
             <div class="col-sm-9 offset-sm-3">
-                <input type="submit" class="btn btn-primary" value="Submit" style="font-size: 18px">
+                <input type="submit" class="btn" value="Submit" style="font-size: 18px;background-color: orange">
                 <input type="reset" class="btn btn-secondary" value="Reset" style="font-size: 18px">
             </div>
         </div>

@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
+@section('content')
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mt40">
@@ -36,7 +36,11 @@
             <div class="form-group row">
                 <label class="col-sm-3 col-form-label" for="RoomType">Room Type:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control"  placeholder="Room Type" name="RoomType" value="{{ $Room_info->RoomType }}" >
+                    <select id="select_id" class="custom-select" name="RoomType">
+                        <option value="" selected="selected">{{ $Room_info->RoomType }} - cuurent type</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Luxury">Luxury</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
@@ -53,7 +57,7 @@
 
 
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn "style="background-color: orange">Submit</button>
             </div>
 
 

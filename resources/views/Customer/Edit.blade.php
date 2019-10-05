@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
+@section('content')
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mt40">
@@ -62,7 +62,7 @@
 
 <br>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn " style="background-color: orange">Submit</button>
             </div>
 
 

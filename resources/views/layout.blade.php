@@ -25,29 +25,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
+<body background="https://ouiwander.com/wp-content/uploads/2018/09/nitish-meena-37745-unsplash-e1537956553976.jpg">
+<nav class="navbar navbar-expand-md bg-dark shadow-sm " >
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="/">
             <img src="https://refreshhikkaduwa.com/images/logo/logo.png" alt="logo" style="width:150px;">
         </a>
 
         <div class="collapse navbar-collapse" >
-            <ul class="navbar-nav text-uppercase ml-auto">
+            <ul class="navbar-nav text-uppercase ml-auto" style="font-family: Helvetica, Arial, sans-serif">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="home">Home</a>
+                    <a class="nav-link js-scroll-trigger" href="home" style="color: orange"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Services</a>
+                    <a class="nav-link js-scroll-trigger" href="#about" style="color: orange">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Events</a>
+                    <a class="nav-link js-scroll-trigger" href="#about" style="color: orange">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="dashboard">Rooms</a>
+                    <a class="nav-link js-scroll-trigger" href="dashboard"style="color: orange">Rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="login">My Account</a>
+                    <a class="nav-link js-scroll-trigger" href="login"style="color: orange">My Account</a>
                 </li>
             </ul>
         </div>

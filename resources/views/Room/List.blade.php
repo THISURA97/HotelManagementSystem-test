@@ -1,11 +1,12 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
-    <div class="container">
+@section('content')
+    <div class="container" >
         <div class="row mt40">
             <div class="col-md-10">
                 <br><br>
-                <h2><a href="/home"><i class="fa fa-arrow-left" style="color:orange"></i></a>&nbsp&nbspRoom&nbsp<b>List</b></h2><br><br>
+                <h2><a href="/Frontdesk"><i class="fa fa-arrow-left" style="color:orange"></i></a>&nbsp&nbspRoom&nbsp<b>List</b><button id="exportButton" class="btn btn-lg btn-danger clearfix" style="margin-left:300px"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                    <button class="btn btn-lg btn-primary clearfix " type="submit1" ><span class="fa fa-print"></span>Print table</button></h2>
             </div>
 
 
@@ -31,7 +32,7 @@
                 <br>
 
             </div>
-            <table class="table table-bordered" id="laravel_crud" style="font-size: 18px">
+            <table id="laravel_crud" class="table table-hover" cellspacing="15" style="font-size: 18px;font-family: sans-serif, Verdana;backdrop-filter: blur(30px)">
                 <thead>
                 <tr style="background-color: orange">
 
@@ -40,7 +41,7 @@
                     <th>RoomNo</th>
                     <th>Status</th>
                     <th>Last updated</th>
-                    <th colspan="3" style=" text-align: center">Action</th>
+                    <th colspan="4" style=" text-align: center">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -61,18 +62,72 @@
 
                             </form>
                         </td>
-                        <td> <a href="{{route('Reservation.create',$Room->RoomNo)}}"class="btn btn-dark">Reserve</a></td>
-
+                        <td> <a href="{{route('Customer.create',$Room->RoomNo)}}"class="btn btn-secondary">New customer</a></td>
+                        <td> <a href="Customer"class="btn btn-secondary">Old customer</a></td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
 
         </div>
-        @endsection
     </div>
-    </div>
-    <script>
+
+    </div><link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#exportButton").click(function () {
+                // parse the HTML table element having an id=exportTable
+                var dataSource = shield.DataSource.create({
+                    data: "#laravel_crud",
+                    schema: {
+                        type: "table",
+                        fields: {
+                            RoomType: { type: String },
+                            RoomNo: { type: String },
+                            Status: { type: Number },
+
+                        }
+                    }
+                });
+
+                // when parsing is done, export the data to PDF
+                dataSource.read().then(function (data) {
+                    var pdf = new shield.exp.PDFDocument({
+                        author: "FrontEnd",
+                        created: new Date()
+                    });
+
+                    pdf.addPage("a4", "portrait");
+
+                    pdf.table(
+
+                        50,
+                        20,
+                        data,
+                        [
+                            { field: "RoomType", title: "Room type", width: 100 },
+                            { field: "RoomNo", title: "Room no", width: 100 },
+                            { field: "Status", title: "Status", width: 100 },
+
+                        ],
+                        {
+                            margins: {
+                                top: 50,
+                                left: 50
+                            }
+                        }
+                    );
+
+                    pdf.saveAs({
+                        fileName: "PrepBootstrapPDF"
+                    });
+                });
+            });
+        });
+
         function myFunction() {
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("myInput");
@@ -91,4 +146,20 @@
                 }
             }
         }
+
+        $(function () {
+            $('button[type="submit1"]').click(function () {
+                var pageTitle = 'Customer List',
+                    stylesheet = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
+                    win = window.open('', 'Print', 'width=300,height=300');
+                win.document.write('<html><head><title>' + pageTitle + '</title>' +
+                    '<link rel="stylesheet" href="' + stylesheet + '">' +
+                    '</head><body>' + $('.table')[0].outerHTML + '</body></html>');
+                win.document.close();
+                win.print();
+                win.close();
+                return false;
+            });
+        });
     </script>
+@endsection

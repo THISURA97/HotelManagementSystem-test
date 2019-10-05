@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
+@section('content')
 <div class="container">
     <div class="row">
         <div class="col-lg-12 mt40">
@@ -38,13 +38,26 @@
         <div class="form-group row">
             <label class="col-sm-3 col-form-label" for="RoomNo">Room No:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control"  placeholder="Room No" name="RoomNo" value="{{ $Reservation_info->RoomNo }}">
+                <select id="select_id" class="custom-select" name="RoomNo">
+                    <option value="" selected="selected">{{ $Reservation_info->RoomNo }} -Current room</option>
+                    <option value="S001">S001</option>
+                    <option value="S002">S002</option>
+                    <option value="S003">S003</option>
+                    <option value="S004">S004</option>
+                    <option value="L001">L001</option>
+                    <option value="L002">L002</option>
+                    <option value="G001">G001</option>
+                    <option value="G002">G002</option>
+                    <option value="G003">G003</option>
+                    <option value="G004">G004</option>
+                    <option value="G005">G005</option>
+                </select>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-3 col-form-label" for="Basis">Basis:</label>
             <div class="col-sm-9"> <select id="select_id" class="custom-select" name="Basis">
-                    <option value="{{ $Reservation_info->Basis }}" selected="selected">Basis type</option>
+                    <option  selected="selected">{{ $Reservation_info->Basis }}- Current Basis </option>
                     <option value="Half-board">Half-board</option>
                     <option value="Full-board">Full-board</option>
                 </select>
@@ -68,7 +81,7 @@
 <br>
 
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn " style="background-color: orange">Submit</button>
             </div>
 
 

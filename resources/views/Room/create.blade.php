@@ -1,12 +1,12 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('carousel1')
+@section('content')
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mt40">
                 <div class="pull-left">
                     <br><br>
-                    <h2><a href="/home"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp <b>Add</b>  Room</h2>
+                    <h2><a href="/Frontdesk"><i class="fa fa-arrow-left" style="color: orange"></i></a>&nbsp&nbsp <b>Add</b>  Room</h2>
                     <br>
                 </div>
             </div>
@@ -37,6 +37,11 @@
                         <option value="S004">S004</option>
                         <option value="L001">L001</option>
                         <option value="L002">L002</option>
+                        <option value="G001">G001</option>
+                        <option value="G002">G002</option>
+                        <option value="G003">G003</option>
+                        <option value="G004">G004</option>
+                        <option value="G005">G005</option>
                     </select>
                 </div>
             </div>
@@ -68,7 +73,7 @@
             <br>
             <div class="form-group row">
                 <div class="col-sm-9 offset-sm-3">
-                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <input type="submit" class="btn" value="Submit" style="background-color: orange">
                     <input type="reset" class="btn btn-secondary" value="Reset">
                 </div>
             </div>

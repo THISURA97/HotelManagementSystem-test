@@ -52,7 +52,7 @@
             <div class="col-sm-12">
                 <div class="about">
                     <img src="images/logo.png" class="img-responsive center-block" alt="">
-                    <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
+                    <p style="color:orange">Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
 
                 </div>
             </div>
@@ -108,7 +108,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <p>Copyright © 2019. Your Company.</p>
+                    <p>Copyright © 2019. Refresh Hotel and Restaurant. Hikkaduwa. Sri Lanka.</p>
                 </div>
                 <div class="col-sm-6"></div>
             </div>
